@@ -1,0 +1,13 @@
+@use '../abstracts' as *;
+
+:root {
+    @each $color, $shade in $colors {
+        @each $prop, $value in $shade {
+            --clr-#{$color}-#{'' + $prop}: #{$value};
+        }
+    }
+
+    // Font weights
+    --font-weight-normal: 400;
+    --font-weight-bold: 700; 
+}

@@ -1,0 +1,6 @@
+@use 'sass:math';
+
+// https://dev.to/nikolab/convert-px-to-rem-using-sass-3-methods-4ep2
+@function px2rem($pxValue) {
+    @return math.div($pxValue, 16px) * 1rem; 
+}

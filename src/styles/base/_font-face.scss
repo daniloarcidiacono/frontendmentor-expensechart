@@ -1,0 +1,18 @@
+// DM Sans font
+@font-face {
+    font-family: DM Sans;
+	src: url('/assets/fonts/DM_Sans/DMSans-Regular.ttf') format('truetype');	
+
+    // CSS custom properties do not work on @font-face rules!
+    // See https://stackoverflow.com/questions/58752373/custom-css-properties-in-font-face
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: DM Sans;
+	src: url('/assets/fonts/DM_Sans/DMSans-Bold.ttf') format('truetype');	
+
+    // CSS custom properties do not work on @font-face rules!
+    // See https://stackoverflow.com/questions/58752373/custom-css-properties-in-font-face
+    font-weight: bold;
+}
