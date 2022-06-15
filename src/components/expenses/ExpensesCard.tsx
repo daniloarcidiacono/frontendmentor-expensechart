@@ -12,7 +12,7 @@ function ExpensesCard({ expenses, monthTotal, deltaPercentage }: ExpensesCardPro
     return (
         <div className="expenses">
             <h1 className="expenses__title">Spending - Last {expenses.length} days</h1>
-            <ExpensesChart expenses={expenses} />
+            <ExpensesChart className="expenses__chart" expenses={expenses} />
             <hr className="expenses__separator" />
             <div className="expenses__footer">
                 <div className="expenses__total">

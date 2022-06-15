@@ -12,12 +12,12 @@ function App() {
 				<BalanceCard balance={921.48} />
 				<ExpensesCard expenses={EXPENSES} monthTotal={478.33} deltaPercentage={2.4} />
 			</main>
-			<footer>
+			{/* <footer>
 				<Attribution 
 					link={"https://github.com/daniloarcidiacono"} 
 					author={"Danilo Arcidiacono"} 
 				/>
-			</footer>
+			</footer> */}
 		</>
 	);
 }

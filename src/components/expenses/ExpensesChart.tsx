@@ -5,11 +5,13 @@ import Tooltip from '../UI/Tooltip';
 import './ExpensesChart.scss';
 
 export interface ExpensesChartProps {
+    className?: string;
     expenses: Expense[];
 }
 
-function ExpensesChart({ expenses }: ExpensesChartProps) {
+function ExpensesChart({ className, expenses }: ExpensesChartProps) {
     const maxExpenses: number = Math.max(...expenses.map(x => x.amount));
+    const chartClasses = clsx("expenseschart", ...(className?.split(' ') || []));
     const barClasses = (expense: Expense) => clsx({ 
         "expenseschart__bar": true, 
         "expenseschart__bar--maximum": expense.amount === maxExpenses 
@@ -18,7 +20,7 @@ function ExpensesChart({ expenses }: ExpensesChartProps) {
 
     return (
         <>
-            <div className="expenseschart">
+            <div className={chartClasses}>
                 {
                     expenses.map(expense => (
                         <React.Fragment key={expense.day}>

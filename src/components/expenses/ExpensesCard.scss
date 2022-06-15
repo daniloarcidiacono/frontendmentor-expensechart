@@ -1,16 +1,28 @@
 .expenses {
-    border-radius: 16px;
-    padding: 2rem;
+    border-radius: 8px;
+    padding: 1.5rem 1.2rem;
     color: var(--clr-neutral-dark-brown);
-    background: var(--clr-primary-white);
+    background: var(--clr-neutral-very-pale-orange);
 
     &__title {
-        font-size: 2rem;
+        font-size: 1.5rem;
+    }
+
+    &__chart {
+        height: 175px;
+        margin-block-start: 3rem;
+        margin-block-end: 1.5rem;
     }
 
     &__separator {
-        border-color: var(--clr-neutral-medium-brown);
-        border-block-end: none;
+        border: {
+            width: 1px;
+            block-style: solid;
+            color: var(--clr-neutral-medium-brown) transparent transparent transparent;
+            inline-style: none;
+        }
+
+        margin-block: 1.5rem;
     }
 
     &__footer {
@@ -22,12 +34,13 @@
 
     &__total {
         &label {
+            font-size: 0.95rem;
             color: var(--clr-neutral-medium-brown);
         }
 
         &amount {
             font-weight: bold;
-            font-size: 3rem;
+            font-size: 1.9rem;
         }
     }
 
@@ -35,10 +48,12 @@
         text-align: end;
 
         &percentage {
+            font-size: 1rem;
             font-weight: bold;
         }
 
         &label {
+            font-size: 0.95rem;
             color: var(--clr-neutral-medium-brown);
         }
     }
