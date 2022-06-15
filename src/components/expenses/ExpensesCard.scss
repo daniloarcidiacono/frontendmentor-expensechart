@@ -1,0 +1,45 @@
+.expenses {
+    border-radius: 16px;
+    padding: 2rem;
+    color: var(--clr-neutral-dark-brown);
+    background: var(--clr-primary-white);
+
+    &__title {
+        font-size: 2rem;
+    }
+
+    &__separator {
+        border-color: var(--clr-neutral-medium-brown);
+        border-block-end: none;
+    }
+
+    &__footer {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    &__total {
+        &label {
+            color: var(--clr-neutral-medium-brown);
+        }
+
+        &amount {
+            font-weight: bold;
+            font-size: 3rem;
+        }
+    }
+
+    &__delta {
+        text-align: end;
+
+        &percentage {
+            font-weight: bold;
+        }
+
+        &label {
+            color: var(--clr-neutral-medium-brown);
+        }
+    }
+}

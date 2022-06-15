@@ -1,0 +1,46 @@
+@use '../../styles/abstracts/colors' as *;
+
+.expenseschart {
+    overflow-x: auto;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(38px, 64px);    
+    // https://stackoverflow.com/questions/33454533/cant-scroll-to-top-of-flex-item-that-is-overflowing-container
+    justify-content: safe center;
+    align-items: flex-end;
+    column-gap: 1rem;    
+    row-gap: 0.5rem;
+    margin-block: 1.5rem;
+    height: 280px;
+    
+    &__bar {
+        border-radius: 4px;
+        // Height is set via Javascript
+        // height: 50%;
+        background-color: var(--clr-primary-soft-red);
+        cursor: pointer;
+
+        &:hover {
+            background-color: lighten(map-get(map-get($colors, primary), soft-red), 5%);
+
+            .expenseschart__tooltip {
+                display: inline-block;
+            }
+        }
+
+        &--maximum {
+            background-color: var(--clr-primary-cyan);
+
+            &:hover {
+                background-color: lighten(map-get(map-get($colors, primary), cyan), 5%);
+            }
+        }
+    }
+
+    &__label {
+        justify-self: center;
+        font-size: 1rem;
+        color: var(--clr-neutral-medium-brown);
+    }
+}

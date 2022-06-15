@@ -1,4 +1,11 @@
-[
+export type WeekDay = "mon" | "tue" | "wed" | "thu" | "fri" | "sat" | "sun";
+
+export interface Expense {
+    day: WeekDay;
+    amount: number;
+}
+
+export const EXPENSES: Expense[] = [
   {
     "day": "mon",
     "amount": 17.45
@@ -27,4 +34,4 @@
     "day": "sun",
     "amount": 25.48
   }
-]
+];

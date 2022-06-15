@@ -1,5 +1,6 @@
 @use '../abstracts/mixins' as *;
 @use '../abstracts/breakpoints' as *;
+@use '../abstracts/colors' as *;
 
 a[target="_blank"]::after {
     margin: 0 3px 0 5px;
@@ -8,5 +9,45 @@ a[target="_blank"]::after {
 }
 
 body {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
     background-color: var(--clr-neutral-cream);
+}
+
+#root {
+    max-width: 100%;
+}
+
+main {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 2rem;
+}
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    
+}
+
+// $scrollbar-primary-bg: #ccc;
+// $scrollbar-accent-bg: darken($scrollbar-primary-bg, 15%);
+$scrollbar-primary-bg: var(--clr-primary-soft-red);
+$scrollbar-accent-bg: darken(map-get(map-get($colors, primary), soft-red), 15%);
+::-webkit-scrollbar-track {
+    background: transparent;
+    outline: 1px solid $scrollbar-primary-bg;
+    border-radius: 4px;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: $scrollbar-primary-bg;
+    border-radius: 4px;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: $scrollbar-accent-bg;
 }
