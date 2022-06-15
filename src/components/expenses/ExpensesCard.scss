@@ -1,6 +1,6 @@
 .expenses {
-    border-radius: 8px;
-    padding: 1.5rem 1.2rem;
+    border-radius: 10px;
+    padding: 24px 20px;
     color: var(--clr-neutral-dark-brown);
     background: var(--clr-neutral-very-pale-orange);
 
@@ -9,9 +9,9 @@
     }
 
     &__chart {
-        height: 175px;
-        margin-block-start: 3rem;
-        margin-block-end: 1.5rem;
+        height: 180px;
+        margin-block-start: 48px;
+        margin-block-end: 24px;
     }
 
     &__separator {
@@ -22,7 +22,7 @@
             inline-style: none;
         }
 
-        margin-block: 1.5rem;
+        margin-block: 24px;
     }
 
     &__footer {

@@ -5,12 +5,12 @@
     display: grid;
     grid-template-rows: 1fr auto;
     grid-auto-flow: column;
-    grid-auto-columns: minmax(32px, 64px);
+    grid-auto-columns: minmax(32px, 50px);
     // https://stackoverflow.com/questions/33454533/cant-scroll-to-top-of-flex-item-that-is-overflowing-container
     justify-content: safe center;
     align-items: flex-end;
-    column-gap: 0.75rem;    
-    row-gap: 0.75rem;
+    column-gap: 12px;
+    row-gap: 12px;
     
     &__bar {
         border-radius: 4px;
