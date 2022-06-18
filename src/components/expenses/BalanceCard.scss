@@ -1,3 +1,5 @@
+@use '../../styles/abstracts/mixins' as *;
+
 .balance {
     display: flex;
     flex-flow: row wrap;
@@ -24,5 +26,24 @@
     &__logo {
         user-select: none;
         height: 2.5rem;
+    }
+}
+
+@include device(medium) {
+    .balance {
+        border-radius: 22px;
+        padding: 1.6rem 2rem;
+
+        &__title {
+            font-size: 1.1rem;
+        }
+
+        &__amount {
+            font-size: 2rem;
+        }
+
+        &__logo {
+            height: 3rem;
+        }
     }
 }

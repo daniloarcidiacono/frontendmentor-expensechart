@@ -1,3 +1,4 @@
+@use '../../styles/abstracts/mixins' as *;
 @use '../../styles/abstracts/colors' as *;
 
 .expenseschart {
@@ -5,7 +6,7 @@
     display: grid;
     grid-template-rows: 1fr auto;
     grid-auto-flow: column;
-    grid-auto-columns: minmax(32px, 50px);
+    grid-auto-columns: minmax(32px, 53px);
     // https://stackoverflow.com/questions/33454533/cant-scroll-to-top-of-flex-item-that-is-overflowing-container
     justify-content: safe center;
     align-items: flex-end;
@@ -40,5 +41,16 @@
         justify-self: center;
         font-size: 0.75rem;
         color: var(--clr-neutral-medium-brown);
+    }
+}
+
+@include device(medium) {
+    .expenseschart {
+        column-gap: 15px;
+        row-gap: 8px;
+        
+        &__label {
+            font-size: 1rem;
+        }
     }
 }

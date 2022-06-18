@@ -1,5 +1,6 @@
 @use '../abstracts/mixins' as *;
 @use '../abstracts/breakpoints' as *;
+@use '../abstracts/functions' as *;
 @use '../abstracts/colors' as *;
 
 a[target="_blank"]::after {
@@ -27,6 +28,13 @@ main {
     justify-content: center;
     align-items: stretch;
     gap: 1rem;
+}
+
+
+@include device(medium) {
+    main {
+        gap: 1.5rem;
+    }
 }
 
 ::-webkit-scrollbar {

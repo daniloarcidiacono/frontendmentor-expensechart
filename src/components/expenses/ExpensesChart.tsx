@@ -1,5 +1,5 @@
+import React from 'react';
 import clsx from 'clsx';
-import React, { UIEventHandler } from 'react';
 import { Expense } from '../../model/Expenses';
 import Tooltip from '../UI/Tooltip';
 import './ExpensesChart.scss';

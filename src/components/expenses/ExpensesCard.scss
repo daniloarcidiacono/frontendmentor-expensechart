@@ -1,3 +1,5 @@
+@use '../../styles/abstracts/mixins' as *;
+
 .expenses {
     border-radius: 10px;
     padding: 24px 20px;
@@ -55,6 +57,47 @@
         &label {
             font-size: 0.95rem;
             color: var(--clr-neutral-medium-brown);
+        }
+    }
+}
+
+@include device(medium) {
+    .expenses {
+        padding: 28px 36px;
+        border-radius: 22px;
+    
+        &__title {
+            font-size: 2rem;
+        }
+    
+        &__chart {
+            margin-block-start: 64px;
+            margin-block-end: 28px;
+        }
+    
+        &__total {
+            padding-block: 0.5rem;
+
+            &label {
+                font-size: 1.1rem;
+            }
+    
+            &amount {
+                font-size: 3rem;
+                line-height: 4rem;
+            }
+        }
+    
+        &__delta {
+            padding-block: 1rem;
+
+            &percentage {
+                font-size: 1.2rem;
+            }
+    
+            &label {
+                font-size: 1.1rem;
+            }
         }
     }
 }
