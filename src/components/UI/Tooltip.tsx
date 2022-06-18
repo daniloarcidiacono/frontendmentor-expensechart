@@ -1,5 +1,4 @@
-import { execPath } from "process";
-import React, { ReactNode, useCallback, useState } from "react";
+import React, { ReactNode, useState } from "react";
 import ReactDOM from 'react-dom';
 import './Tooltip.scss';
 
